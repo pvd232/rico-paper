@@ -1,0 +1,26 @@
+# Selected metadata transcribed from rico-rebuild; source code remains there.
+repository = "https://github.com/pvd232/rico-rebuild.git"
+inventory_commit = "0d2c5246a0964248edaf67b5fbab5475a1eb5bb5"
+development_limitation = "HOLD informed model development; its scores are development results."
+
+[mil]
+model_id = "direct_mil_all_treated_control_aligned_string112_20261006"
+source_commit = "a2ee9be44bc6a0595676a349f78449fbd38df09b"
+pointer_path = "models/direct_mil.json"
+implementation_root = "src/rico/domain/mil"
+
+[hopfield]
+model_id = "asymmetric_hopfield_all_treated_ot_20261007"
+source_commit = "5f518182e3d2fdb8a5229527664091e28780c778"
+pointer_path = "models/asymmetric_hopfield.json"
+implementation_root = "src/rico/domain/hopfield"
+
+[k562_counts]
+url = "https://ndownloader.figshare.com/files/35773219"
+filename = "K562_essential_raw_singlecell_01.h5ad"
+bytes = 10661879995
+sha256 = "3e5a63a9e892b21029bb55fca4e12517a49aad7af6c14133ca63d12cf68c6cee"
+md5 = "4f1122ce1c7f13299a68df6459a266d3"
+source_path = "src/rico/plans/atlas_foundation.py"
+source_commit = "0d2c5246a0964248edaf67b5fbab5475a1eb5bb5"
+article_url = "https://plus.figshare.com/articles/dataset/20029387"
