@@ -23,6 +23,7 @@ Use Python 3.12 and the project-local `.venv`:
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[dev,notebook]'
+python -m ipykernel install --prefix "$VIRTUAL_ENV" --name rico-paper --display-name 'RICO paper (.venv)'
 ```
 
 On a Linux NVIDIA host with a compatible CUDA 13 driver, install
@@ -31,6 +32,10 @@ On a Linux NVIDIA host with a compatible CUDA 13 driver, install
 before selecting a GPU extra. JAX uses the GPU; Viper also requires PyTorch for
 its existing checkpoint serializer. A CPU PyTorch wheel is sufficient for that
 serializer.
+
+Start Jupyter with `jupyter lab --no-browser --ip=127.0.0.1` from the repository
+root. When working over SSH, forward port 8888 to your machine and open the
+authenticated URL printed by Jupyter. Select the `RICO paper (.venv)` kernel.
 
 The Viper dependency pins the JAX continuation change from
 [PR #22](https://github.com/pvd232/viper/pull/22). That change has passed CPU
